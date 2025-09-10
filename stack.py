@@ -1,8 +1,13 @@
-""" STACK """
+''' ============================= STACK =====================================
+
+> in Python, stack operations are already built into the array data structure
+
+'''
 
 def stack_create():
     """ Return 'stack' as an empty array """
     stack = []
+    stack.append()
     return stack
 
 def stack_is_empty(stack):
