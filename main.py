@@ -2,60 +2,88 @@ from stack import *
 from queue import *
 from cqueue import *
 from pqueue import *
+from deque import *
 
 def main():
-    # PQUEUE
-    arr = []
-
-    insert_node(arr, 3)
-    insert_node(arr, 4)
-    insert_node(arr, 9)
-    insert_node(arr, 5)
-    insert_node(arr, 2)
+    # --- DEQUEU ---
+    mydeque = Deque()
     
-    print("Max-Heap array: " + str(arr))
+    mydeque.add_rear(1)
+    mydeque.add_rear(2)
+    mydeque.add_rear(3)
     
-    delete_node(arr, 4)
-    print("After deleting an element: " + str(arr))
+    mydeque.print()
 
-#     # CQUEUE
-#     myqueue = CQueue(3)
-#     myqueue.enqueue(1)
-#     myqueue.enqueue(2)
-#     myqueue.enqueue(3)
-#     myqueue.enqueue(4)
-# 
-#     myqueue.print_queue()
-# 
-#     myqueue.dequeue()
-#     myqueue.dequeue()
-#     myqueue.enqueue(4)
-#     myqueue.enqueue(5)
-#     myqueue.enqueue(6)
-# 
-#     myqueue.print_queue()
-# 
+    mydeque.add_front(4)
+    mydeque.add_front(5)
+    mydeque.add_front(6)
+
+    mydeque.print()
+
+    mydeque.remove_front()
+    mydeque.remove_rear()
+
+    mydeque.print()
+    print(mydeque.size())
+
+    # --- PQUEUE ---
+    # arr = []
+
+    # insert_node(arr, 3)
+    # insert_node(arr, 4)
+    # insert_node(arr, 9)
+    # insert_node(arr, 5)
+    # insert_node(arr, 2)
+    # 
+    # print("Max-Heap array: " + str(arr))
+    # 
+    # delete_node(arr, 4)
+    # print("After deleting an element: " + str(arr))
+
+
+
+    # --- CQUEUE ---
+    # myqueue = CQueue(3)
+    # myqueue.enqueue(1)
+    # myqueue.enqueue(2)
+    # myqueue.enqueue(3)
+    # myqueue.enqueue(4)
+ 
+    # myqueue.print_queue()
+ 
+    # myqueue.dequeue()
+    # myqueue.dequeue()
+    # myqueue.enqueue(4)
+    # myqueue.enqueue(5)
+    # myqueue.enqueue(6)
+ 
+    # myqueue.print_queue()
+     
+
 
     # --- QUEUE ---
-   # my_queue = Queue(3)
-   # 
-   # my_queue.enqueue(1)
-   # my_queue.enqueue(2)
-   # my_queue.enqueue(3)
-   # my_queue.enqueue(4)
-   # my_queue.print_queue()
-   # my_queue.print_current_size()
-   # 
-   # my_queue.dequeue()
-   # my_queue.dequeue()
+    # my_queue = Queue(3)
+    # 
+    # my_queue.enqueue(1)
+    # my_queue.enqueue(2)
+    # my_queue.enqueue(3)
+    # my_queue.enqueue(4)
+    # my_queue.print_queue()
+    # my_queue.print_current_size()
+    # 
+    # my_queue.dequeue()
+    # my_queue.dequeue()
 
-   # my_queue.print_queue()   
-   # my_queue.print_current_size()
+    # my_queue.print_queue()   
+    # my_queue.print_current_size()
 
-   # my_queue.enqueue(1)
-   # my_queue.enqueue(1)
+    # my_queue.enqueue(1)
+    # my_queue.enqueue(1)
 
-   # my_queue.print_current_size()
+    # my_queue.print_current_size()
+    
+
+
     # --- STACK ---
     # my_stack = stack_create()
     # stack_push(my_stack, 1)
