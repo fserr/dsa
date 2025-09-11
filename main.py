@@ -1,25 +1,40 @@
 from stack import *
 from queue import *
 from cqueue import *
+from pqueue import *
 
 def main():
-    # CQUEUE
-    myqueue = CQueue(3)
-    myqueue.enqueue(1)
-    myqueue.enqueue(2)
-    myqueue.enqueue(3)
-    myqueue.enqueue(4)
+    # PQUEUE
+    arr = []
 
-    myqueue.print_queue()
+    insert_node(arr, 3)
+    insert_node(arr, 4)
+    insert_node(arr, 9)
+    insert_node(arr, 5)
+    insert_node(arr, 2)
+    
+    print("Max-Heap array: " + str(arr))
+    
+    delete_node(arr, 4)
+    print("After deleting an element: " + str(arr))
 
-    myqueue.dequeue()
-    myqueue.dequeue()
-    myqueue.enqueue(4)
-    myqueue.enqueue(5)
-    myqueue.enqueue(6)
-
-    myqueue.print_queue()
-
+#     # CQUEUE
+#     myqueue = CQueue(3)
+#     myqueue.enqueue(1)
+#     myqueue.enqueue(2)
+#     myqueue.enqueue(3)
+#     myqueue.enqueue(4)
+# 
+#     myqueue.print_queue()
+# 
+#     myqueue.dequeue()
+#     myqueue.dequeue()
+#     myqueue.enqueue(4)
+#     myqueue.enqueue(5)
+#     myqueue.enqueue(6)
+# 
+#     myqueue.print_queue()
+# 
 
     # --- QUEUE ---
    # my_queue = Queue(3)
