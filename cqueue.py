@@ -1,9 +1,6 @@
 '''
 Circular queue:
-    > last items point to the first => size isn't reduced by popping elems
-
-Complexity (array impl):
-    >
+    > last items point to the first => size isn't reduced by popping elemements
 '''
 
 class CQueue():

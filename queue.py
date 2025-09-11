@@ -1,10 +1,8 @@
 ''' 
-
 Standard queue:
-    > popping an item means reducing the size of the queue
-
-Complexity (array impl):
-    > Queue & deque --> O(1)
+    > FIFO collection of items
+    > Implementable via arrays
+    > Popping an items cause to shrink the size unless the entire queue is emptied
 
 '''
 

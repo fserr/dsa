@@ -1,7 +1,8 @@
-''' ============================= STACK =====================================
-
-> in Python, stack operations are already built into the array data structure
-
+'''
+Stack:
+    > LIFO collection of items
+    > Implementamble as an array
+    > in Python, stack operations (pop, push) are already built into the array data structure
 '''
 
 def stack_create():
