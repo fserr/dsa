@@ -9,7 +9,7 @@ int count = 0;
 typedef struct stack {
     int items[MAX];
     int top;
-} Stack
+} Stack;
 
 
 void stackInit(Stack *s) {
@@ -31,25 +31,54 @@ void stackPush(Stack *s, int newItem) {
         printf("The stack is full.\n");
     } else {
         s->items[s->top+1] = newItem;
-        top++;
+        s->top++;
     }
 
     count++;
 }
 
-void stackPop(Stack *s) {
+int stackPop(Stack *s) {
     if (stackIsEmpty(s)) {
         printf("The stack is empty.");
-    } else {
-        
+        return -1;
     }
+    
+    int popped = s->top;
+    s->top--;        
+
+    return popped;
 }
 
 void stackPrint(Stack *s) {
+    printf("[");
+    for (int i = 0; i <= s->top; i++) {
+        printf(" %d ", s->items[i]);
+    }
 
+    printf("]\n");
+}
+
+void stackPeek(Stack *s) {
+    printf("Stack top element: %d\n", s->items[s->top]);
 }
 
 
 int main( void ) {
-    
+    Stack s;
+    stackInit(&s);
+
+    stackPush(&s, 1);
+    stackPush(&s, 2);
+    stackPush(&s, 3);
+    stackPush(&s, 4);
+    stackPeek(&s);
+
+    stackPrint(&s);
+
+    stackPop(&s);
+    stackPop(&s);
+
+    stackPeek(&s);
+
+    stackPrint(&s);
 }
